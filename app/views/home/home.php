@@ -1,29 +1,29 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonanza Cafe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/scrollreveal">
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
     }
   </style>
 </head>
-
 <body class="bg-white text-gray-800">
-  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-10 lg:py-20 px-10 lg:px-20">
-    <div class="w-full lg:w-1/2 lg:pr-10 mb-10 lg:mb-0" data-sr-id="1">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center h-[80vh] px-10 lg:px-20 py-10 pt-20 lg:pt-0">
+    <div class="w-full lg:w-1/2 lg:pr-10 mb-10 lg:mb-0 text-center lg:text-left" data-sr-id="1">
       <h1 class="text-5xl font-bold text-black mb-6">
         ENJOY THE MOST DELICIOUS COFFEE
       </h1>
       <p class="text-xl text-black mb-8">
         Made from selected Indonesian coffee beans for the best coffee drinking experience every day
       </p>
-      <div class="flex space-x-4">
+      <div class="flex justify-center lg:justify-start space-x-4">
         <button class="bg-black text-white py-2 px-6 rounded-full">
           Order Coffee
         </button>
@@ -32,13 +32,14 @@
         </button>
       </div>
     </div>
-    <div class="w-full lg:w-1/2 lg:pl-10" data-sr-id="2">
-      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg shadow-lg" height="400" src="<?= BASEURL; ?>/img/home/footerhome.png" width="600" />
+    <div class="w-full lg:w-1/2 lg:pl-10 flex justify-center" data-sr-id="2">
+      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg shadow-lg w-full h-auto object-cover" src="<?= BASEURL; ?>/img/home/footerhome.png" />
     </div>
   </div>
-  <div class="container mx-auto px-10 py-8">
-    <!-- Desktop Layout -->
-    <div class="hidden md:grid md:grid-cols-2 md:gap-8">
+
+  <!-- Bagian "Back Story" -->
+  <div class="mt-16 container mx-auto px-10 py-8">
+    <div class="md:grid md:grid-cols-2 md:gap-8">
       <div class="flex flex-col items-center justify-center px-10 mb-8" data-sr-id="3">
         <div class="max-w-lg">
           <h1 class="text-5xl font-bold mb-4">
@@ -53,10 +54,10 @@
         </div>
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="4">
-        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/home/Frame 2.png" width="600" />
+        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 2.png" width="600" />
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="5">
-        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/home/Frame 4.png" width="600" />
+        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 4.png" width="600" />
       </div>
       <div class="flex flex-col items-center justify-center px-10 mb-8" data-sr-id="6">
         <div class="max-w-lg">
@@ -72,38 +73,9 @@
         </div>
       </div>
     </div>
-    <!-- Mobile Layout -->
-    <div class="md:hidden">
-      <div class="mb-8 flex flex-col items-center px-4" data-sr-id="7">
-        <div class="max-w-lg">
-          <h1 class="text-5xl font-bold mb-4">
-            BACK STORY
-          </h1>
-          <h2 class="text-2xl font-semibold mb-4">
-            THE STORY OF OUR CAFE BUSINESS
-          </h2>
-          <p class="text-lg mb-4">
-            Bonanza Cafe started from a truck garage inherited from our grandfather. After grandfather died, the garage was no longer used, until our family got the idea to turn it into a cafe. In the spirit of maintaining the family legacy and the desire to create a comfortable space for the local community, the garage was eventually converted into the Bonanza Cafe. Today, the cafe is not only a gathering place, but also a symbol of transformation and family memories that live on in every corner.
-          </p>
-        </div>
-        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/pngegg 1.png" />
-      </div>
-      <div class="mb-8 flex flex-col items-center px-4" data-sr-id="8">
-        <div class="max-w-lg">
-          <h1 class="text-5xl font-bold mb-4">
-            WHY CHOOSE US?
-          </h1>
-          <h2 class="text-2xl font-semibold mb-4">
-            THE REASON WHY YOU CHOOSE US FOR YOUR REST TIME
-          </h2>
-          <p class="text-lg mb-4">
-            Bonanza Cafe offers a different experience from other cafes, with an atmosphere that combines elements of history and modern comfort. In addition to a unique place with authentic industrial design, Bonanza serves quality menus with fresh ingredients and friendly service. This cafe is the perfect place to gather, work, or just relax while enjoying a warm and full of stories atmosphere. For those looking for a place with a different ambiance and excellent service, Bonanza Cafe is the ideal choice.
-          </p>
-        </div>
-        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/3GLGCnCeon2xES3FR4KrDOuwtr9NGB0ATYHQg8EA4rKYJM2JA.jpg" width="600" />
-      </div>
-    </div>
   </div>
+
+  <!-- Bagian "OUR CUSTOMERS" yang sudah dipulihkan -->
   <div class="container mx-auto px-10 py-8">
     <div class="text-center mb-16">
       <h1 class="text-5xl font-bold mb-4">
@@ -115,7 +87,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="bg-white p-6 rounded-lg shadow-lg" data-sr-id="9">
-        <img alt="Customer 1" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/sI8ZWrevWfrJmkdIOs58rwfzaGUAhH1RFEjfMiovANDAVkxOB.jpg" width="100" />
+        <img alt="Customer 1" class="w-24 h-24 rounded-full mx-auto mb-4" src="https://storage.googleapis.com/a1aa/image/sI8ZWrevWfrJmkdIOs58rwfzaGUAhH1RFEjfMiovANDAVkxOB.jpg" />
         <h2 class="text-xl font-semibold mb-2">
           Customer 1
         </h2>
@@ -124,7 +96,7 @@
         </p>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-lg" data-sr-id="10">
-        <img alt="Customer 2" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/qZNjEGbTUSrMBFuhkgWvMJxQiwSjPdkcJxHYxvwe31bpiM2JA.jpg" width="100" />
+        <img alt="Customer 2" class="w-24 h-24 rounded-full mx-auto mb-4" src="https://storage.googleapis.com/a1aa/image/qZNjEGbTUSrMBFuhkgWvMJxQiwSjPdkcJxHYxvwe31bpiM2JA.jpg" />
         <h2 class="text-xl font-semibold mb-2">
           Customer 2
         </h2>
@@ -133,7 +105,7 @@
         </p>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-lg" data-sr-id="11">
-        <img alt="Customer 3" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/mo8w7AaDjrLSGNLj4GkYsf0ylJXmiKKi7GjkhZuU9N1niM2JA.jpg" width="100" />
+        <img alt="Customer 3" class="w-24 h-24 rounded-full mx-auto mb-4" src="https://storage.googleapis.com/a1aa/image/mo8w7AaDjrLSGNLj4GkYsf0ylJXmiKKi7GjkhZuU9N1niM2JA.jpg" />
         <h2 class="text-xl font-semibold mb-2">
           Customer 3
         </h2>
@@ -143,15 +115,9 @@
       </div>
     </div>
   </div>
+  
   <script>
-    ScrollReveal().reveal('[data-sr-id]', {
-      duration: 1000,
-      distance: '50px',
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      reset: true
-    });
+    ScrollReveal().reveal('[data-sr-id]', { distance: '50px', duration: 1000, easing: 'ease-out', origin: 'bottom', interval: 100 });
   </script>
 </body>
-
 </html>
