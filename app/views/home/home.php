@@ -15,9 +15,9 @@
   </style>
 </head>
 <body class="bg-white text-gray-800">
-  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center h-[80vh] px-10 lg:px-20 py-10 pt-20 lg:pt-0">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center h-[80vh] px-10 lg:px-20 py-10 pt-10 lg:pt-0">
     <div class="w-full lg:w-1/2 lg:pr-10 mb-10 lg:mb-0 text-center lg:text-left" data-sr-id="1">
-      <h1 class="text-5xl font-bold text-black mb-6">
+      <h1 class="text-5xl font-bold text-black mb-12">
         ENJOY THE MOST DELICIOUS COFFEE
       </h1>
       <p class="text-xl text-black mb-8">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/2 lg:pl-10 flex justify-center" data-sr-id="2">
-      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg shadow-lg w-full h-auto object-cover" src="<?= BASEURL; ?>/img/home/footerhome.png" />
+      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg w-full h-auto object-cover" src="<?= BASEURL; ?>/img/home/footerhome.png" />
     </div>
   </div>
 
@@ -54,10 +54,10 @@
         </div>
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="4">
-        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 2.png" width="600" />
+        <img alt="A person pouring coffee in a cafe" class="rounded-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 2.png" width="600" />
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="5">
-        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 4.png" width="600" />
+        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg mb-4" src="<?= BASEURL; ?>/img/home/Frame 4.png" width="600" />
       </div>
       <div class="flex flex-col items-center justify-center px-10 mb-8" data-sr-id="6">
         <div class="max-w-lg">

@@ -34,6 +34,14 @@ class Home extends Controller
         $this->view('templates/footer');
     }
 
+    public function about()
+    {
+        $this->view('templates/header');
+        $this->view('templates/navbar');
+        $this->view('home/about');
+        $this->view('templates/footer');
+    }
+
     public function btnContact()
     {
         if ($this->model('ContactModel')->addContact($_POST) > 0) {
