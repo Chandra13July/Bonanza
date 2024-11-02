@@ -47,8 +47,8 @@
     </style>
 
     <div class="container mx-auto py-12 px-4">
-        <h1 class="text-3xl md:text-4xl font-bold text-center text-black">Contact Us</h1>
-        <p class="text-center text-gray-500 mt-4 text-base md:text-lg">Have questions or comments? Write a message to us!</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-black">Get In Touch</h1>
+        <p class="text-center text-gray-500 mt-4 text-base md:text-lg">wanna do some bussines or have complaint? contact us!</p>
         <div class="flex flex-col md:flex-row justify-center mt-12">
             <div class="bg-black text-white p-8 md:p-10 rounded-lg w-full md:w-2/5 lg:w-2/5">
                 <h2 class="text-lg md:text-xl font-bold mb-6">Contact Information</h2>
@@ -89,14 +89,13 @@
             </div>
         </div>
         <div class="mt-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-black mb-6">Our Location</h2>
-            <div class="flex justify-center">
-                <div class="w-full md:w-5/6 lg:w-4/5">
-                    <iframe class="w-full h-64 md:h-96 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1234567890123!2d113.12345678901234!3d-7.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e12345678901%3A0x1234567890123456!2sJl.%20Pancur%2C%20Sumpelan%20Utara%2C%20Lumutan%2C%20Kec.%20Prajekan%2C%20Kabupaten%20Bondowoso%2C%20Jawa%20Timur%2068284!5e0!3m2!1sen!2sid!4v1611234567890!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-black mb-2">Our Location</h2>
+    <p class="text-center text-gray-500 mb-6 text-base md:text-lg">Find us on the map below and visit us anytime!</p> <!-- Subtitle added here -->
+    <div class="flex justify-center">
+        <div class="w-full md:w-5/6 lg:w-4/5">
+            <iframe class="w-full h-64 md:h-96 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1234567890123!2d113.12345678901234!3d-7.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e12345678901%3A0x1234567890123456!2sJl.%20Pancur%2C%20Sumpelan%20Utara%2C%20Lumutan%2C%20Kec.%20Prajekan%2C%20Kabupaten%20Bondowoso%2C%20Jawa%20Timur%2068284!5e0!3m2!1sen!2sid!4v1611234567890!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
+</div>
 </body>
-
 </html>
