@@ -1,2 +1,2 @@
-# Bonanza
-Project Website Cafe Bonanza 
+# Website Cafe Bonanza
+Project Semester 3 Website & Mobile Cafe Bonanza
