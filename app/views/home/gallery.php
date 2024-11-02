@@ -15,7 +15,8 @@
 
 <body class="bg-gray-100">
     <div class="max-w-7xl mx-auto py-10 relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold mb-10">Our Gallery</h1>
+    <h1 class="text-4xl font-bold mb-4">Our Gallery</h1> <!-- Reduced margin-bottom on the title -->
+<p class="text-gray-500 mb-10 text-base md:text-lg">Explore our cozy and inviting ambiance through our collection of images.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 img-gallery">
             <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery1.png" width="200" />
             <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery2.png" width="200" />
