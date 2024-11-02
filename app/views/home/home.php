@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/2 lg:pl-10" data-sr-id="2">
-      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/ORimricCRipANpc8rvtLKCg6GpfMo33IKfAp7vkVbVO0JWsTA.jpg" width="600" />
+      <img alt="Interior of a modern coffee shop with various coffee equipment and shelves filled with coffee products" class="rounded-lg shadow-lg" height="400" src="<?= BASEURL; ?>/img/home/footerhome.png" width="600" />
     </div>
   </div>
   <div class="container mx-auto px-10 py-8">
@@ -53,10 +53,10 @@
         </div>
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="4">
-        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/DVTfQRscSawQaCgKI82KqDabJYMlYz4Ou6IC445BsNtYJM2JA.jpg" width="600" />
+        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/home/Frame 2.png" width="600" />
       </div>
       <div class="flex items-center justify-center px-10 mb-8" data-sr-id="5">
-        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/3GLGCnCeon2xES3FR4KrDOuwtr9NGB0ATYHQg8EA4rKYJM2JA.jpg" width="600" />
+        <img alt="Interior of a cafe with hanging lights and coffee machines" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/home/Frame 4.png" width="600" />
       </div>
       <div class="flex flex-col items-center justify-center px-10 mb-8" data-sr-id="6">
         <div class="max-w-lg">
@@ -86,7 +86,7 @@
             Bonanza Cafe started from a truck garage inherited from our grandfather. After grandfather died, the garage was no longer used, until our family got the idea to turn it into a cafe. In the spirit of maintaining the family legacy and the desire to create a comfortable space for the local community, the garage was eventually converted into the Bonanza Cafe. Today, the cafe is not only a gathering place, but also a symbol of transformation and family memories that live on in every corner.
           </p>
         </div>
-        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/DVTfQRscSawQaCgKI82KqDabJYMlYz4Ou6IC445BsNtYJM2JA.jpg" width="600" />
+        <img alt="A person pouring coffee in a cafe" class="rounded-lg shadow-lg mb-4" height="400" src="<?= BASEURL; ?>/img/pngegg 1.png" />
       </div>
       <div class="mb-8 flex flex-col items-center px-4" data-sr-id="8">
         <div class="max-w-lg">
