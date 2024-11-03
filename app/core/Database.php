@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Database {
     private $host = DB_HOST;
@@ -11,7 +11,7 @@ class Database {
 
     public function __construct()
     {
-        // data source name
+        // Data source name
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
 
         $option = [
@@ -33,18 +33,18 @@ class Database {
 
     public function bind($param, $value, $type = null)
     {
-        if( is_null($type) ) {
-            switch( true ) {
-                case is_int($value) :
+        if (is_null($type)) {
+            switch (true) {
+                case is_int($value):
                     $type = PDO::PARAM_INT;
                     break;
-                case is_bool($value) :
+                case is_bool($value):
                     $type = PDO::PARAM_BOOL;
                     break;
-                case is_null($value) :
+                case is_null($value):
                     $type = PDO::PARAM_NULL;
                     break;
-                default :
+                default:
                     $type = PDO::PARAM_STR;
             }
         }
@@ -54,7 +54,7 @@ class Database {
 
     public function execute()
     {
-        $this->stmt->execute();
+        return $this->stmt->execute();
     }
 
     public function resultSet()
@@ -73,7 +73,4 @@ class Database {
     {
         return $this->stmt->rowCount();
     }
-
-
-
 }

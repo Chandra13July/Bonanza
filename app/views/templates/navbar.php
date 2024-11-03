@@ -88,7 +88,7 @@
                 </ul>
             </div>
             <div class="flex items-center gap-6">
-                <a class="bg-gray-700 text-white px-8 py-2 rounded-full btn-effect" href="#">
+                <a class="bg-gray-700 text-white px-8 py-2 rounded-full btn-effect" href="<?= BASEURL; ?>/auth/login">
                     Sign In
                 </a>
                 <ion-icon class="text-3xl cursor-pointer md:hidden" name="menu" onclick="onToggleMenu(this)">
