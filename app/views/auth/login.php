@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup Page</title>
+    <title>Login Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
@@ -11,8 +11,7 @@
 <?php if (isset($_SESSION['success'])): ?>
     <div id="success-notification" class="bg-green-500 text-white p-2 rounded shadow-lg absolute top-4 right-4 text-sm z-50">
         <?= $_SESSION['success']; ?>
-        <?php unset($_SESSION['success']);
-        unset($_SESSION['signup_success']); ?>
+        <?php unset($_SESSION['success']); ?>
     </div>
 <?php endif; ?>
 
@@ -32,23 +31,15 @@
                     <span class="ml-4 text-2xl font-semibold">Cafe Bonanza</span>
                 </div>
                 <div class="mb-4">
-                    <h1 class="text-3xl font-bold mb-2">CREATE AN ACCOUNT</h1>
-                    <p class="text-gray-500">Join us and start your journey</p>
+                    <h1 class="text-3xl font-bold mb-2">LOGIN TO YOUR ACCOUNT</h1>
+                    <p class="text-gray-500">Welcome back! Please log in to continue.</p>
                 </div>
-
-                <form id="signup-form" action="<?= BASEURL; ?>/auth/btnSignup" method="POST" class="flex flex-col items-center">
-                    <div class="mb-4 w-full">
-                        <label class="block text-gray-700" for="username">Username</label>
-                        <div class="flex items-center border border-gray-300 rounded-md p-2 w-full">
-                            <i class="fas fa-user text-gray-400 mr-2"></i>
-                            <input type="text" name="username" id="username" placeholder="Username" value="<?= isset($_SESSION['signup_data']['username']) ? htmlspecialchars($_SESSION['signup_data']['username']) : ''; ?>" class="w-full outline-none text-base" required />
-                        </div>
-                    </div>
+                <form id="login-form" action="<?= BASEURL; ?>/auth/btnLogin" method="POST" class="flex flex-col items-center">
                     <div class="mb-4 w-full">
                         <label class="block text-gray-700" for="email">Email</label>
                         <div class="flex items-center border border-gray-300 rounded-md p-2 w-full">
                             <i class="fas fa-envelope text-gray-400 mr-2"></i>
-                            <input type="email" name="email" id="email" placeholder="Email" value="<?= isset($_SESSION['signup_data']['email']) ? htmlspecialchars($_SESSION['signup_data']['email']) : ''; ?>" class="w-full outline-none text-base" required />
+                            <input type="email" name="email" id="email" placeholder="Email" value="<?= isset($_SESSION['login_data']['email']) ? htmlspecialchars($_SESSION['login_data']['email']) : ''; ?>" class="w-full outline-none text-base" required />
                         </div>
                     </div>
                     <div class="mb-4 w-full relative">
@@ -59,41 +50,32 @@
                             <i id="toggle-password" class="fas fa-eye absolute right-2 top-9 cursor-pointer"></i>
                         </div>
                     </div>
-                    <div class="mb-4 w-full relative">
-                        <label class="block text-gray-700" for="confirm-password">Confirm Password</label>
-                        <div class="flex items-center border border-gray-300 rounded-md p-2 w-full">
-                            <i class="fas fa-lock text-gray-400 mr-2"></i>
-                            <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirm Password" class="w-full outline-none text-base" required />
-                            <i id="toggle-confirm-password" class="fas fa-eye absolute right-2 top-9 cursor-pointer"></i>
-                        </div>
-                    </div>
-
                     <?php if (isset($_SESSION['error'])): ?>
                         <div class="text-red-500 mb-4">
                             <?= $_SESSION['error']; ?>
                             <?php unset($_SESSION['error']); ?>
                         </div>
                     <?php endif; ?>
-
-                    <button type="submit" class="w-full bg-black text-white py-2 rounded-md">SIGN UP</button>
+                    <button type="submit" class="w-full bg-black text-white py-2 rounded-md">LOGIN</button>
                 </form>
 
                 <div class="text-center mt-6">
-                    <p class="text-gray-500">Already have an account? <a href="<?= BASEURL; ?>/auth/login" class="text-blue-500 hover:underline">Login</a></p>
+                    <p class="text-gray-500">Don't have an account? <a href="<?= BASEURL; ?>/auth/signup" class="text-blue-500 hover:underline">Sign up</a></p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Hide the success notification after a few seconds and redirect to the login page
+        // Hide the success notification after a few seconds and redirect
         window.onload = function() {
             const notification = document.getElementById('success-notification');
             if (notification) {
                 setTimeout(() => {
                     notification.classList.add('hidden');
-                    window.location.href = "<?= BASEURL; ?>/auth/login"; // Redirect to the login page
-                }, 3000); // 3000 ms = 3 seconds
+                    // Redirect to the desired page after 3 seconds
+                    window.location.href = "<?= BASEURL; ?>/home"; // Change to the target page after success
+                }, 3000); // 3 seconds
             }
         };
 
@@ -105,15 +87,6 @@
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
             togglePassword.classList.toggle('fa-eye-slash');
-        });
-
-        const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
-        const confirmPasswordInput = document.getElementById('confirm-password');
-
-        toggleConfirmPassword.addEventListener('click', () => {
-            const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            confirmPasswordInput.setAttribute('type', type);
-            toggleConfirmPassword.classList.toggle('fa-eye-slash');
         });
     </script>
 </body>

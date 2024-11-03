@@ -6,30 +6,24 @@ class CustomerModel
 
     public function __construct()
     {
-        $this->db = new Database;
+        $this->db = new Database(); // Assuming you have a Database class for DB connection
     }
 
-    // Fungsi untuk signup
+    public function findUserByEmail($email)
+    {
+        $this->db->query('SELECT * FROM customer WHERE Email = :email');
+        $this->db->bind(':email', $email);
+        return $this->db->single();
+    }
+
     public function signup($data)
     {
-        $query = "INSERT INTO customer (username, email, password) VALUES (:username, :email, :password)";
-        
-        // Binding data
-        $this->db->query($query);
+        $this->db->query('INSERT INTO customer (Username, Email, Password) VALUES (:username, :email, :password)');
         $this->db->bind(':username', $data['username']);
         $this->db->bind(':email', $data['email']);
-        $this->db->bind(':password', password_hash($data['password'], PASSWORD_DEFAULT));
-
-        // Eksekusi dan cek apakah data berhasil dimasukkan
+        // Hash the password before storing it
+        $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
+        $this->db->bind(':password', $hashedPassword);
         return $this->db->execute();
-    }
-
-    // Fungsi untuk cek apakah email sudah terdaftar
-    public function getCustomerByEmail($email)
-    {
-        $query = "SELECT * FROM customer WHERE email = :email";
-        $this->db->query($query);
-        $this->db->bind(':email', $email);
-        return $this->db->single(); // Mengembalikan satu baris jika ada
     }
 }
