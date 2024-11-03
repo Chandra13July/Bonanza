@@ -20,9 +20,17 @@ class Home extends Controller
 
     public function gallery()
     {
+        // Mengambil model GalleryModel
+        $galleryItems = $this->model('GalleryModel')->getGallery();
+
+        // Menyertakan data galeri ke tampilan
+        $data = [
+            'galleryItems' => $galleryItems
+        ];
+
         $this->view('templates/header');
         $this->view('templates/navbar');
-        $this->view('home/gallery');
+        $this->view('home/gallery', $data);
         $this->view('templates/footer');
     }
 

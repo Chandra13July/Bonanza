@@ -1,58 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Image Gallery</title>
+    <title>Cafe Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <style>
         body {
             background: #ecf4fb;
         }
+
+        .img-gallery {
+            position: relative;
+        }
+
+        .img-info {
+            opacity: 1; /* Selalu terlihat */
+            position: absolute;
+            bottom: 0; /* Letakkan di bawah gambar */
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: left; /* Mengatur teks agar rata kiri */
+            border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+        }
+
+        .img-gallery img {
+            width: 100%; /* Memastikan gambar memenuhi lebar kontainer */
+            height: 250px; /* Atur tinggi gambar agar lebih besar */
+            object-fit: cover; /* Memastikan gambar terjaga proporsinya */
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden; /* Prevents overflow of title and description */
+            border-radius: 8px; /* Rounded corners for the container */
+        }
     </style>
 </head>
 
 <body class="bg-gray-100">
     <div class="max-w-7xl mx-auto py-10 relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold mb-4">Our Gallery</h1>
-        <p class="text-gray-500 mb-10 text-base md:text-lg">Explore our cozy and inviting ambiance through our collection of images.</p>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 img-gallery">
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery1.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery2.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery3.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery4.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery5.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery6.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery7.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery8.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery9.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery10.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery11.png" width="200" />
-            <img class="w-full cursor-pointer transition-transform transform hover:scale-75 hover:rotate-6 hover:rounded-lg hover:shadow-2xl" height="200" onclick="openFullImg(this.src)" src="<?= BASEURL; ?>/img/gallery/gallery12.png" width="200" />
+        <h1 class="text-4xl font-bold mb-4">Our Cafe Gallery</h1>
+        <p class="text-gray-500 mb-10 text-base md:text-lg">Explore the cozy and inviting ambiance of our cafe through our collection of images.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <?php foreach ($data['galleryItems'] as $item): ?>
+                <div class="gallery-item img-gallery">
+                    <img
+                        src="<?= BASEURL; ?>/<?= htmlspecialchars($item['ImageUrl']); ?>"
+                        alt="<?= htmlspecialchars($item['Title']); ?>" />
+                    <div class="img-info">
+                        <div class="img-title text-lg font-bold"><?= htmlspecialchars($item['Title']); ?></div>
+                        <div class="img-description text-sm"><?= htmlspecialchars($item['Description']); ?></div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
-    <div class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-20" id="fullImgBox">
-        <div class="relative">
-            <img alt="Full view of the selected image" class="w-11/12 max-w-lg" height="500" id="fullImg" src="https://storage.googleapis.com/a1aa/image/xfeLUJO7e6Ub1oSRUDA5GGGmHNQwH8evsbMK3tWgD4sQgvyOB.jpg" width="500" />
-            <span class="absolute top-0 right-12 text-black text-4xl font-bold cursor-pointer bg-opacity-50 p-2" onclick="closeFullImg()">×</span>
-        </div>
-    </div>
-    <script>
-        var fullImgBox = document.getElementById("fullImgBox");
-        var fullImg = document.getElementById("fullImg");
-
-        function openFullImg(pic) {
-            fullImgBox.style.display = "flex";
-            fullImg.src = pic;
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeFullImg() {
-            fullImgBox.style.display = "none";
-            document.body.classList.remove('overflow-hidden');
-        }
-    </script>
 </body>
 
 </html>
