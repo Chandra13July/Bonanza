@@ -10,11 +10,19 @@ class Home extends Controller
         $this->view('templates/footer');
     }
 
-    public function menu()
+    public function menu($categoryId = null)
     {
+        // Mengambil model MenuModel
+        $MenuItems = $this->model('MenuModel')->getMenu($categoryId);
+
+        // Menyertakan data galeri ke tampilan
+        $data = [
+            'MenuItems' => $MenuItems
+        ];
+
         $this->view('templates/header');
         $this->view('templates/navbar');
-        $this->view('home/menu');
+        $this->view('home/menu', $data);
         $this->view('templates/footer');
     }
 
