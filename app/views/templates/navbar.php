@@ -93,21 +93,27 @@
             <div class="relative flex items-center gap-6">
                 <?php if (isset($_SESSION['username'])): ?>
                     <div class="flex items-center relative">
-                        <img src="<?= BASEURL; ?>/img/default_user.jpg" alt="User Photo" class="w-10 h-10 rounded-full mr-2 cursor-pointer" onclick="toggleDropdown()">
+                        <!-- User Image -->
+                        <img src="<?= !empty($_SESSION['ImageUrl']) ? $_SESSION['ImageUrl'] : BASEURL . '/img/customer/User.png'; ?>" alt="User Photo" class="w-10 h-10 rounded-full mr-2 cursor-pointer" onclick="toggleDropdown()">
+
+                        <!-- Username Display -->
                         <span class="text-gray-800 cursor-pointer" onclick="toggleDropdown()"><?= htmlspecialchars($_SESSION['username']); ?></span>
 
                         <!-- Dropdown Menu -->
-                        <div id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden">
+                        <div id="dropdown-menu" class="absolute right-[-10px] top-full mt-2 w-48 bg-white rounded-lg shadow-lg hidden z-40">
                             <a href="<?= BASEURL; ?>/profile" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
                             <a href="<?= BASEURL; ?>/cart" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Cart</a>
                             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200" onclick="openLogoutModal()">Logout</a>
                         </div>
                     </div>
                 <?php else: ?>
+                    <!-- Sign In Button -->
                     <a class="bg-gray-700 text-white px-8 py-2 rounded-full btn-effect" href="<?= BASEURL; ?>/auth/login">
                         Sign In
                     </a>
                 <?php endif; ?>
+
+                <!-- Mobile Menu Icon -->
                 <ion-icon class="text-3xl cursor-pointer md:hidden" name="menu" onclick="onToggleMenu(this)"></ion-icon>
             </div>
         </nav>

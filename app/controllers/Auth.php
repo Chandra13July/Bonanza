@@ -96,6 +96,7 @@ class Auth extends Controller
                 unset($_SESSION['login_data']);
                 $_SESSION['user_id'] = $user['CustomerId'];
                 $_SESSION['username'] = $user['Username'];
+                $_SESSION['ImageUrl'] = $user['ImageUrl'] ?? BASEURL . '/img/customer/User.png'; // Set ImageUrl in session
                 $_SESSION['success'] = "Login successful!";
                 $_SESSION['redirect'] = true; // Add this line
                 header('Location: ' . BASEURL . '/auth/login'); // Redirect to login
