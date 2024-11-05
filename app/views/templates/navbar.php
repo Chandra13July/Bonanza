@@ -94,7 +94,7 @@
                 <?php if (isset($_SESSION['username'])): ?>
                     <div class="flex items-center relative">
                         <!-- User Image -->
-                        <img src="<?= !empty($_SESSION['ImageUrl']) ? $_SESSION['ImageUrl'] : BASEURL . '/img/customer/User.png'; ?>" alt="User Photo" class="w-10 h-10 rounded-full mr-2 cursor-pointer" onclick="toggleDropdown()">
+                        <img src="<?= BASEURL ?><?= !empty($_SESSION['ImageUrl']) ? "/" . $_SESSION['ImageUrl'] :  '/img/customer/User.png'; ?>" alt="User Photo" class="w-10 h-10 rounded-full mr-2 cursor-pointer" onclick="toggleDropdown()">
 
                         <!-- Username Display -->
                         <span class="text-gray-800 cursor-pointer" onclick="toggleDropdown()"><?= htmlspecialchars($_SESSION['username']); ?></span>
