@@ -98,5 +98,31 @@
     </div>
     <button class="px-6 py-2 mt-8 bg-black text-white font-bold">LIHAT LEBIH BANYAK</button>
 </section>
+<section class="py-12 bg-gray-100 text-center px-4 md:px-0">
+    <h2 class="text-xl font-bold mb-8">SOME REVIEWS OF OUR CUSTOMER</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 shadow-md">
+            <i class="fas fa-quote-left text-gray-600"></i>
+            <p class="my-4">"kopinya mantap tapi musicnya terlalu keras!"</p>
+            <p class="font-bold">- John Doe</p>
+        </div>
+        <div class="bg-white p-6 shadow-md">
+            <i class="fas fa-quote-left text-gray-600"></i>
+            <p class="my-4">"tempatnya terlalu ramai tapi makanannya enak"</p>
+            <p class="font-bold">- Jane Smith</p>
+        </div>
+        <div class="bg-white p-6 shadow-md">
+            <i class="fas fa-quote-left text-gray-600"></i>
+            <p class="my-4">"kasirnya ramah tapi kurang interaktif"</p>
+            <p class="font-bold">- Emily Johnson</p>
+        </div>
+        <div class="bg-white p-6 shadow-md">
+            <i class="fas fa-quote-left text-gray-600"></i>
+            <p class="my-4">"kafe yg bagus juga menyenangkan"</p>
+            <p class="font-bold">- Michael Brown</p>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
