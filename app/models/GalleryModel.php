@@ -6,13 +6,14 @@ class GalleryModel
 
     public function __construct()
     {
-        $this->db = new Database(); // Asumsikan Anda memiliki kelas Database untuk koneksi DB
+        $this->db = new Database(); // Ensure the Database class is correctly defined and imported
     }
 
-    // Fungsi untuk menampilkan semua data galeri
+    // Function to retrieve all gallery data
     public function getGallery()
     {
         $this->db->query('SELECT GalleryId, ImageUrl, Title, Description FROM gallery');
-        return $this->db->resultSet(); // Mengembalikan semua hasil sebagai array
+        return $this->db->resultSet(); // Returns all results as an array
     }
 }
+?>

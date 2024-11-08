@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today Special Menu</title>  
+    <title>Today Special Menu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <style>
         body {
             font-family: 'Alexandria', sans-serif;
         }
+
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
         .card {
-            max-width: 300px; /* Set max width for the cards */
+            max-width: 300px;
+            /* Set max width for the cards */
         }
     </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Menu Header -->
@@ -35,16 +40,14 @@
         <a href="<?= BASEURL; ?>/home/menu" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
             <i class="fas fa-check mr-1"></i> All Menus
         </a>
-        <a href="<?= BASEURL; ?>/home/menu/1" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
+        <a href="<?= BASEURL; ?>/home/menu/Makanan" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
             <i class="fas fa-utensils mr-1"></i> Food
         </a>
-        <a href="<?= BASEURL; ?>/home/menu/2" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
+        <a href="<?= BASEURL; ?>/home/menu/Minuman" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
             <i class="fas fa-glass-martini-alt mr-1"></i> Drinks
         </a>
-        <a href="<?= BASEURL; ?>/home/menu/3" class="bg-black text-white rounded-full px-4 py-1 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium hover:bg-gray-800">
-            <i class="fas fa-cookie-bite mr-1"></i> Snacks
-        </a>
     </div>
+
 
     <!-- Menu Grid with padding -->
     <div class="px-4 sm:px-6 lg:px-8">
@@ -86,4 +89,5 @@
         }
     </script>
 </body>
+
 </html>

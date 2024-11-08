@@ -197,17 +197,13 @@ class Auth extends Controller
         $email = trim($_POST['email']);
         $password = $_POST['password'];
 
-        // Validate input
         if (empty($email) || empty($password)) {
             $_SESSION['error'] = "Email and password are required!";
             header('Location: ' . BASEURL . '/auth/loginAdmin');
             exit;
         }
 
-        // Check if user exists
         $user = $this->EmployeeModel->findUserByEmail($email);
-
-        // Debugging: Check what user is fetched
         error_log("User fetched: " . print_r($user, true)); // Log the fetched user data
 
         if ($user) {

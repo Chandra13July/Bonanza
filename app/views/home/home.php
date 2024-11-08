@@ -16,7 +16,7 @@
     <section class="py-8 px-4 md:px-0">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
             <div class="w-full md:w-1/2">
-                <img alt="Interior kafe yang nyaman dengan meja dan kursi kayu" class="mx-auto md:w-[800px] md:h-[600px]" src="<?= BASEURL; ?>/img/home/Group 62.png" width="400" height="300" />
+                <img alt="Interior kafe yang nyaman dengan meja dan kursi kayu" class="mx-auto md:w-[800px] md:h-[600px]" src="<?= BASEURL; ?>/img/home/home1.png" width="400" height="300" />
             </div>
             <div class="w-full md:w-1/2 text-left md:pl-12 mt-4 md:mt-0">
                 <h1 class="text-4xl md:text-6xl font-bold">CAFE BONANZA</h1>

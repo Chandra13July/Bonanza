@@ -10,14 +10,15 @@ class Home extends Controller
         $this->view('templates/footer');
     }
 
-    public function menu($categoryId = null)
+    public function menu($category = null)
     {
-        // Mengambil model MenuModel
-        $MenuItems = $this->model('MenuModel')->getMenu($categoryId);
+        // Get menu items based on the provided category (if any)
+        $MenuItems = $this->model('MenuModel')->getMenu($category);
 
-        // Menyertakan data galeri ke tampilan
+        // Prepare data for the view
         $data = [
-            'MenuItems' => $MenuItems
+            'MenuItems' => $MenuItems,
+            'SelectedCategory' => $category
         ];
 
         $this->view('templates/header');
@@ -56,18 +57,5 @@ class Home extends Controller
         $this->view('templates/navbar');
         $this->view('home/about');
         $this->view('templates/footer');
-    }
-
-    public function btnContact()
-    {
-        if ($this->model('ContactModel')->addContact($_POST) > 0) {
-            $_SESSION['flash'] = 'Pesan berhasil dikirim!';
-            header('Location: ' . BASEURL . '/home/contact');
-            exit;
-        } else {
-            $_SESSION['flash'] = 'Pesan gagal dikirim, coba lagi.';
-            header('Location: ' . BASEURL . '/home/contact');
-            exit;
-        }
     }
 }
